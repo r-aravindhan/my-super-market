@@ -1,0 +1,6 @@
+rootProject.name = 'supermarket-billing'
+
+include 'inventory-service'
+include 'pricing-service'
+include 'discounts-service'
+include 'billing-service'

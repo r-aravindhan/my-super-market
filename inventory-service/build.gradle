@@ -1,0 +1,3 @@
+bootJar {
+    archiveBaseName = 'inventory-service'
+}

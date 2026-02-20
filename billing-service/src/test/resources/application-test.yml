@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testbillingdb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+services:
+  inventory:
+    url: http://localhost:8081
+  pricing:
+    url: http://localhost:8082
+  discounts:
+    url: http://localhost:8083
