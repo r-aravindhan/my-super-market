@@ -3,7 +3,7 @@ spring:
     url: jdbc:h2:mem:testbillingdb
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
 
 services:
   inventory:

@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-prices-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: prices
+            columns:
+              - column:
+                  name: sku
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: unit_price
+                  type: decimal(19, 2)
+              - column:
+                  name: currency
+                  type: varchar(255)
