@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-products-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: products
+            columns:
+              - column:
+                  name: sku
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: category
+                  type: varchar(255)
+              - column:
+                  name: quantity
+                  type: int
+              - column:
+                  name: reorder_threshold
+                  type: int
+              - column:
+                  name: version
+                  type: bigint
