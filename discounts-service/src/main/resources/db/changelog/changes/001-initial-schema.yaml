@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-discounts-table
+      author: liquibase
+      changes:
+        - createTable:
+            tableName: discounts
+            columns:
+              - column:
+                  name: code
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: type
+                  type: varchar(50)
+              - column:
+                  name: value
+                  type: decimal(19, 2)
+              - column:
+                  name: target_sku
+                  type: varchar(255)
+              - column:
+                  name: target_category
+                  type: varchar(255)
+              - column:
+                  name: min_quantity
+                  type: int
+              - column:
+                  name: min_purchase_amount
+                  type: decimal(19, 2)
+              - column:
+                  name: valid_from
+                  type: date
+              - column:
+                  name: valid_to
+                  type: date
+              - column:
+                  name: active
+                  type: boolean
